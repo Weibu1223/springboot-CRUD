@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Search Result</h1>
+<div th:if="${user == null}">
+    <p><span th:text="暫時沒有資料"></span></p>
+</div>
+<div th:if="${user != null}">
+    <p>ID: <span th:text="${user.id}"></span></p>
+    <p>Name: <span th:text="${user.name}"></span></p>
+    <p>Password: <span th:text="${user.password}"></span></p>
+    <p>Age: <span th:text="${user.age}"></span></p>
+    <p>Sex: <span th:text="${user.sex}"></span></p>
+</div>
+<a href="/user/getusetbyid" class="btn btn-primary" role="button">Search again</a>
+<a href="/user/index" class="btn btn-primary" role="button">Back to Home</a>
+</body>
+</html>

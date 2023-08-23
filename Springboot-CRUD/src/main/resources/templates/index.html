@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Test CRUD</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Sex</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.sex}"></td>
+        </tr>
+    </table>
+    <a href="/user/adduser" class="btn btn-primary" role="button">AddUser</a><br>
+    <a href="/user/getusetbyid" class="btn btn-primary" role="button">SearchBYID</a><br>
+    <a href="/user/updatepassword" class="btn btn-primary" role="button">UpdatePassword</a><br>
+    <a href="/user/deleteuser" class="btn btn-primary" role="button">DeleteUser</a>
+</div>
+
+</body>
+</html>

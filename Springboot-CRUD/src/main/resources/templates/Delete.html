@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${code}">
+    <p th:text="${msg}"></p>
+</div>
+<div calss="container">
+    <h1>Delete UserId</h1>
+    <form th:action="@{/user/deleteuser}" method="post">
+        <label for="userId">ID:</label>
+        <input type="text" id="userId" name="userId"><br>
+
+        <input type="submit" value="Delete">
+    </form>
+</div>
+<a href="/user/index" class="btn btn-primary" role="button">Back to Home</a>
+</body>
+</html>
